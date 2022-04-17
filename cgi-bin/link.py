@@ -37,9 +37,9 @@ link_file.write(f"""
 </html>
 """)
 link_file.close()
-os.replace('/Users/puars/PycharmProjects/CTRLReservationBot/IdiNa/' + short_url, '/Users/puars/PycharmProjects/CTRLReservationBot/IdiNa/l/' + short_url)
+os.replace('/root/IdiNa/' + short_url, '/root/IdiNa/l/' + short_url)
 
-filesPath = r"/Users/puars/PycharmProjects/CTRLReservationBot/IdiNa/l/"
+filesPath = r"/root/IdiNa/l/"
 criticalTime = arrow.now().shift(hours=+1).shift(days=-1)
 for item in Path(filesPath).glob('*'):
     if item.is_file():
@@ -87,7 +87,7 @@ print("""
     </style>
 </head>
 <body>
-    <center><form action="http://localhost/cgi-bin/link.py">
+    <center><form action="http://идина.рф/cgi-bin/link.py">
         <h1>ИдиНа</h1>
         <br>
         <label for="url">Введите ссылку: </label><br>
@@ -106,7 +106,7 @@ print("""
     <br>
 """)
 print(f"""
-    <center><p>Ваша ссылка: localhost/l/{short_url}</p></center><br>
+    <center><p>Ваша ссылка: идина.рф/l/{short_url}</p></center><br>
 </body>
 </html>
 """)
