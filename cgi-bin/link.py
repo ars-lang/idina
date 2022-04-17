@@ -37,9 +37,9 @@ link_file.write(f"""
 </html>
 """)
 link_file.close()
-os.replace('/usr/lib/' + short_url, '/usr/lib/l' + short_url)
+os.replace('/usr/share/nginx/html' + short_url, '/usr/share/nginx/html/l' + short_url)
 
-filesPath = r"/usr/lib/l"
+filesPath = r"/usr/share/nginx/html/l"
 criticalTime = arrow.now().shift(hours=+1).shift(days=-1)
 for item in Path(filesPath).glob('*'):
     if item.is_file():
