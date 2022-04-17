@@ -37,9 +37,9 @@ link_file.write(f"""
 </html>
 """)
 link_file.close()
-os.replace('/root/IdiNa/' + short_url, '/root/IdiNa/l/' + short_url)
+os.replace('/usr/lib/' + short_url, '/usr/lib/l' + short_url)
 
-filesPath = r"/root/IdiNa/l/"
+filesPath = r"/usr/lib/l"
 criticalTime = arrow.now().shift(hours=+1).shift(days=-1)
 for item in Path(filesPath).glob('*'):
     if item.is_file():
